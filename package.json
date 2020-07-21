@@ -1,0 +1,9 @@
+{
+  "name": "typechain",
+  "version": "1.0.0",
+  "description": "Block Chain build on typescript n learning typescript basic course",
+  "main": "index.js",
+  "repository": "https://github.com/ddamjengi1020/typescript-basic",
+  "author": "ddamjengi1020 <silluat11@gmail.com>",
+  "license": "MIT"
+}
