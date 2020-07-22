@@ -79,3 +79,9 @@ const addBlock = (candidateBlock: Block): void => {
         console.error("Error:[Hash]")
     }
 }
+
+createNewBlock("are");
+createNewBlock("you");
+createNewBlock("?");
+
+console.log(getBlockChain());

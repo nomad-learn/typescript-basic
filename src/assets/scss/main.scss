@@ -1,0 +1,13 @@
+.block {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .block__hash {
+        font-weight: 600;
+        font-size: 13px;
+    }
+}
