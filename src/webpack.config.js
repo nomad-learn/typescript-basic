@@ -34,8 +34,18 @@ module.exports = {
                         }
                     }, "sass-loader"
                 ]
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                }
+            },
         ]
+    },
+    node: {
+        crypto: 'empty',
     },
     plugins: [new MiniCssExtractPlugin({ filename: "styles.css" })],
     optimization: {

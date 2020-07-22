@@ -10,7 +10,7 @@ class Block {
     static calculateBlockHash = (index: number,
         previousHash: string,
         data: string,
-        timestamp: number): string => CryptoJS.SHA256(index + previousHash + data + timestamp).toString()
+        timestamp: number): string => CryptoJS.SHA256(index + previousHash + data + timestamp).toString().substr(0, 6);
 
     static validateStructure = (aBlock: Block): boolean =>
         typeof aBlock.index === "number" &&
@@ -33,7 +33,7 @@ class Block {
     }
 }
 
-const genesisBlock: Block = new Block(0, "20202020", "", "How", new Date().getTime())
+const genesisBlock: Block = new Block(0, "123456", "", "How", new Date().getTime())
 
 let blockChain: Block[] = [genesisBlock];
 
@@ -79,9 +79,3 @@ const addBlock = (candidateBlock: Block): void => {
         console.error("Error:[Hash]")
     }
 }
-
-createNewBlock("are");
-createNewBlock("you");
-createNewBlock("?");
-
-console.log(getBlockChain());

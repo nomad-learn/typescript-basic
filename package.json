@@ -7,17 +7,22 @@
   "author": "ddamjengi1020 <silluat11@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "cd src && MODE=development webpack -w"
+    "dev:server": "nodemon -e ts --exec ts-node src/server.ts --ignore 'src/assets/**/*'",
+    "dev:assets": "cd src && MODE=development webpack -w"
   },
   "dependencies": {
     "@types/crypto-js": "^3.1.47",
+    "@types/express": "^4.17.7",
     "autoprefixer": "^9.8.5",
     "crypto-js": "^4.0.0",
     "css-loader": "^3.6.0",
+    "express": "^4.17.1",
+    "file-loader": "^6.0.0",
     "postcss-loader": "^3.0.0",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
     "ts-loader": "^8.0.1",
+    "tsc-watch": "^4.2.9",
     "typescript": "^3.9.7",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.43.0",

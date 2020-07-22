@@ -1,5 +1,8 @@
-// css
+// scss
 import "../scss/main.scss";
 
-// js
-import "./blockChain.ts";
+// ts
+import "./viewBlock.ts";
+
+// image
+import "../images/blockChain.gif";
